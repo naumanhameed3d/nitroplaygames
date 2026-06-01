@@ -30,15 +30,26 @@
     line-height: 1.7;
   }
 
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
   /* NAV */
   nav {
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
     background: rgba(13,13,13,0.95);
     backdrop-filter: blur(8px);
     border-bottom: 1px solid #2a2a2a;
-    display: flex; align-items: center; justify-content: space-between;
-    padding: 0 5%;
     height: 64px;
+  }
+  .nav-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 32px;
+    height: 100%;
+    display: flex; align-items: center; justify-content: space-between;
   }
   .nav-logo {
     font-family: 'Barlow Condensed', sans-serif;
@@ -56,8 +67,9 @@
   .nav-links a:hover { color: var(--white); }
 
   /* SECTIONS */
-  section { padding: 100px 5%; }
+  section { padding: 100px 0; }
   section:first-of-type { padding-top: 160px; }
+  section > .container { padding: 0 32px; }
 
   .section-tag {
     display: inline-block;
@@ -316,21 +328,24 @@
 
 <!-- NAVIGATION -->
 <nav>
-  <a class="nav-logo" href="#home"><span>Nitro</span> Play Games</a>
-  <ul class="nav-links">
-    <li><a href="#home">Home</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#games">Games</a></li>
-    <li><a href="#privacy">Privacy</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
+  <div class="nav-inner">
+    <a class="nav-logo" href="#home"><span>Nitro</span> Play Games</a>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#games">Games</a></li>
+      <li><a href="#privacy">Privacy</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
 </nav>
 
 <!-- HERO -->
 <section id="home">
   <div class="hero-bg"></div>
   <div class="hero-grid"></div>
-  <div class="hero-content">
+  <div class="container">
+    <div class="hero-content">
     <div class="section-tag">Mobile Game Publisher</div>
     <h1>Play <em>Fast.</em><br>Play <em>Free.</em></h1>
     <p class="hero-sub">Nitro Play Games creates fun, fast, and free mobile games for Android players worldwide. Discover your next favourite game on Google Play.</p>
@@ -355,10 +370,12 @@
       </div>
     </div>
   </div>
+  </div>
 </section>
 
 <!-- ABOUT -->
 <section id="about">
+  <div class="container">
   <div class="section-tag">About Us</div>
   <div class="about-grid">
     <div>
@@ -397,137 +414,138 @@
       </div>
     </div>
   </div>
+  </div>
 </section>
 
 <!-- GAMES -->
 <section id="games">
-  <div class="section-tag">Our Games</div>
-  <h2>Games We <span>Publish</span></h2>
-  <p style="max-width:560px;">We publish a variety of free mobile games on Google Play including casual, arcade, puzzle, and action titles — designed to be fun for everyone.</p>
-  <div class="games-grid">
-    <div class="game-card">
-      <div class="game-icon" style="background:rgba(232,51,42,0.12);">🕹️</div>
-      <h3>Arcade Games</h3>
-      <p>Fast-paced action games to test your reflexes and beat your high score.</p>
+  <div class="container">
+    <div class="section-tag">Our Games</div>
+    <h2>Games We <span>Publish</span></h2>
+    <p style="max-width:560px;">We publish a variety of free mobile games on Google Play including casual, arcade, puzzle, and action titles — designed to be fun for everyone.</p>
+    <div class="games-grid">
+      <div class="game-card">
+        <div class="game-icon" style="background:rgba(232,51,42,0.12);">🕹️</div>
+        <h3>Arcade Games</h3>
+        <p>Fast-paced action games to test your reflexes and beat your high score.</p>
+      </div>
+      <div class="game-card">
+        <div class="game-icon" style="background:rgba(255,193,7,0.12);">🧩</div>
+        <h3>Casual Games</h3>
+        <p>Easy to pick up and perfect for quick sessions anytime, anywhere.</p>
+      </div>
+      <div class="game-card">
+        <div class="game-icon" style="background:rgba(1,135,95,0.12);">⚡</div>
+        <h3>Action Games</h3>
+        <p>High-energy gameplay that keeps you on the edge of your seat.</p>
+      </div>
+      <div class="game-card">
+        <div class="game-icon" style="background:rgba(79,140,255,0.12);">🎯</div>
+        <h3>Puzzle Games</h3>
+        <p>Brain-teasing challenges that are satisfying to solve and fun to replay.</p>
+      </div>
     </div>
-    <div class="game-card">
-      <div class="game-icon" style="background:rgba(255,193,7,0.12);">🧩</div>
-      <h3>Casual Games</h3>
-      <p>Easy to pick up and perfect for quick sessions anytime, anywhere.</p>
-    </div>
-    <div class="game-card">
-      <div class="game-icon" style="background:rgba(1,135,95,0.12);">⚡</div>
-      <h3>Action Games</h3>
-      <p>High-energy gameplay that keeps you on the edge of your seat.</p>
-    </div>
-    <div class="game-card">
-      <div class="game-icon" style="background:rgba(79,140,255,0.12);">🎯</div>
-      <h3>Puzzle Games</h3>
-      <p>Brain-teasing challenges that are satisfying to solve and fun to replay.</p>
-    </div>
+    <br>
+    <a class="gp-btn" href="https://play.google.com/store/apps/developer?id=Nitro+Play+Games" target="_blank">
+      ▶ &nbsp;View All Games on Google Play
+    </a>
   </div>
-  <br>
-  <a class="gp-btn" href="https://play.google.com/store/apps/developer?id=Nitro+Play+Games" target="_blank">
-    ▶ &nbsp;View All Games on Google Play
-  </a>
 </section>
 
 <!-- PRIVACY POLICY -->
 <section id="privacy">
-  <div class="section-tag">Legal</div>
-  <h2>Privacy <span>Policy</span></h2>
-  <div class="privacy-box">
-    <p class="updated">Last updated: June 2025</p>
-    <p>Nitro Play Games ("we", "our", or "us") operates mobile games available on the Google Play Store. This Privacy Policy explains how we handle information in connection with our games and services.</p>
-
-    <h3>1. Information We Collect</h3>
-    <p>Our games may collect the following types of information:</p>
-    <ul>
-      <li>Device information (device model, operating system version, unique device identifiers)</li>
-      <li>Gameplay data (scores, progress, in-game actions)</li>
-      <li>Advertising data via third-party ad networks such as Google AdMob</li>
-      <li>Crash and diagnostic data to improve game performance</li>
-    </ul>
-    <p>We do not knowingly collect personal information from children under the age of 13 without parental consent.</p>
-
-    <h3>2. How We Use Information</h3>
-    <ul>
-      <li>Provide and improve our games and services</li>
-      <li>Display relevant advertisements</li>
-      <li>Analyse gameplay to fix bugs and improve performance</li>
-      <li>Comply with legal obligations</li>
-    </ul>
-
-    <h3>3. Third-Party Services</h3>
-    <p>Our games may include third-party services such as Google AdMob (advertising), Google Play Services (leaderboards, achievements), and Firebase (analytics and crash reporting). These services have their own privacy policies.</p>
-
-    <h3>4. Data Sharing</h3>
-    <p>We do not sell, trade, or rent your personal information to third parties. We may share aggregated, non-identifiable data for analytics purposes.</p>
-
-    <h3>5. Data Security</h3>
-    <p>We take reasonable measures to protect the data we collect. However, no method of transmission over the internet is 100% secure.</p>
-
-    <h3>6. Children's Privacy</h3>
-    <p>Our games are not directed at children under 13. If you believe we have inadvertently collected information from a child, please contact us immediately.</p>
-
-    <h3>7. Changes to This Policy</h3>
-    <p>We may update this Privacy Policy from time to time. We will notify users of significant changes by updating the date at the top of this page.</p>
-
-    <h3>8. Contact Us</h3>
-    <p>Email: nitroplaygames79@gmail.com<br>Publisher: Nitro Play Games</p>
+  <div class="container">
+    <div class="section-tag">Legal</div>
+    <h2>Privacy <span>Policy</span></h2>
+    <div class="privacy-box">
+      <p class="updated">Last updated: June 2025</p>
+      <p>Nitro Play Games ("we", "our", or "us") operates mobile games available on the Google Play Store. This Privacy Policy explains how we handle information in connection with our games and services.</p>
+      <h3>1. Information We Collect</h3>
+      <p>Our games may collect the following types of information:</p>
+      <ul>
+        <li>Device information (device model, operating system version, unique device identifiers)</li>
+        <li>Gameplay data (scores, progress, in-game actions)</li>
+        <li>Advertising data via third-party ad networks such as Google AdMob</li>
+        <li>Crash and diagnostic data to improve game performance</li>
+      </ul>
+      <p>We do not knowingly collect personal information from children under the age of 13 without parental consent.</p>
+      <h3>2. How We Use Information</h3>
+      <ul>
+        <li>Provide and improve our games and services</li>
+        <li>Display relevant advertisements</li>
+        <li>Analyse gameplay to fix bugs and improve performance</li>
+        <li>Comply with legal obligations</li>
+      </ul>
+      <h3>3. Third-Party Services</h3>
+      <p>Our games may include third-party services such as Google AdMob (advertising), Google Play Services (leaderboards, achievements), and Firebase (analytics and crash reporting). These services have their own privacy policies.</p>
+      <h3>4. Data Sharing</h3>
+      <p>We do not sell, trade, or rent your personal information to third parties. We may share aggregated, non-identifiable data for analytics purposes.</p>
+      <h3>5. Data Security</h3>
+      <p>We take reasonable measures to protect the data we collect. However, no method of transmission over the internet is 100% secure.</p>
+      <h3>6. Children's Privacy</h3>
+      <p>Our games are not directed at children under 13. If you believe we have inadvertently collected information from a child, please contact us immediately.</p>
+      <h3>7. Changes to This Policy</h3>
+      <p>We may update this Privacy Policy from time to time. We will notify users of significant changes by updating the date at the top of this page.</p>
+      <h3>8. Contact Us</h3>
+      <p>Email: nitroplaygames79@gmail.com<br>Publisher: Nitro Play Games</p>
+    </div>
   </div>
 </section>
 
 <!-- CONTACT -->
 <section id="contact">
-  <div class="section-tag">Get In Touch</div>
-  <h2>Contact <span>Us</span></h2>
-  <p style="max-width:520px;">Have a question about one of our games, need support, or just want to say hello? We would love to hear from you.</p>
-  <div class="contact-card">
-    <div class="contact-item">
-      <div class="contact-icon">🏢</div>
-      <div>
-        <div class="contact-key">Publisher</div>
-        <div class="contact-val">Nitro Play Games</div>
+  <div class="container">
+    <div class="section-tag">Get In Touch</div>
+    <h2>Contact <span>Us</span></h2>
+    <p style="max-width:520px;">Have a question about one of our games, need support, or just want to say hello? We would love to hear from you.</p>
+    <div class="contact-card">
+      <div class="contact-item">
+        <div class="contact-icon">🏢</div>
+        <div>
+          <div class="contact-key">Publisher</div>
+          <div class="contact-val">Nitro Play Games</div>
+        </div>
       </div>
-    </div>
-    <div class="contact-item">
-      <div class="contact-icon">📧</div>
-      <div>
-        <div class="contact-key">Email</div>
-        <div class="contact-val">nitroplaygames79@gmail.com</div>
+      <div class="contact-item">
+        <div class="contact-icon">📧</div>
+        <div>
+          <div class="contact-key">Email</div>
+          <div class="contact-val">nitroplaygames79@gmail.com</div>
+        </div>
       </div>
-    </div>
-    <div class="contact-item">
-      <div class="contact-icon">📱</div>
-      <div>
-        <div class="contact-key">Platform</div>
-        <div class="contact-val">Google Play Store — Android</div>
+      <div class="contact-item">
+        <div class="contact-icon">📱</div>
+        <div>
+          <div class="contact-key">Platform</div>
+          <div class="contact-val">Google Play Store — Android</div>
+        </div>
       </div>
-    </div>
-    <div class="contact-item">
-      <div class="contact-icon">⏱️</div>
-      <div>
-        <div class="contact-key">Response Time</div>
-        <div class="contact-val">Within 2–3 business days</div>
+      <div class="contact-item">
+        <div class="contact-icon">⏱️</div>
+        <div>
+          <div class="contact-key">Response Time</div>
+          <div class="contact-val">Within 2–3 business days</div>
+        </div>
       </div>
-    </div>
-    <div class="contact-note">
-      For in-game issues or bug reports, please include your device model and Android version in your message so we can assist you faster.
+      <div class="contact-note">
+        For in-game issues or bug reports, please include your device model and Android version in your message so we can assist you faster.
+      </div>
     </div>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <a class="footer-logo" href="#home"><span>Nitro</span> Play Games</a>
-  <div class="footer-links">
-    <a href="#about">About</a>
-    <a href="#games">Games</a>
-    <a href="#privacy">Privacy Policy</a>
-    <a href="#contact">Contact</a>
+  <div class="container" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px; padding: 0 32px;">
+    <a class="footer-logo" href="#home"><span>Nitro</span> Play Games</a>
+    <div class="footer-links">
+      <a href="#about">About</a>
+      <a href="#games">Games</a>
+      <a href="#privacy">Privacy Policy</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <p>© 2025 Nitro Play Games. All rights reserved.</p>
   </div>
-  <p>© 2025 Nitro Play Games. All rights reserved.</p>
 </footer>
 
 </body>
